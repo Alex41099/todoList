@@ -1,0 +1,7 @@
+.linearProgress {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 64px;
+    width: 100%;
+}
