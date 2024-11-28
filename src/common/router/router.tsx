@@ -18,10 +18,6 @@ export const router = createBrowserRouter([
         element: <Main />,
       },
       {
-        path: Path.Login,
-        element: <Login />,
-      },
-      {
         path: "/*",
         element: <Page404 />,
       },

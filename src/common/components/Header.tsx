@@ -23,16 +23,11 @@ type HeaderPropsType = {
 }
 
 export const Header = ({ theme, themeMode }: HeaderPropsType) => {
-  const isLoggedIn = useAppSelector(selectIsLoggedIn)
   const appStatus = useAppSelector(selectAppStatus)
   const dispatch = useAppDispatch()
 
   const changeHandler = () => {
     dispatch(changeThemeAC(themeMode === "light" ? "dark" : "light"))
-  }
-
-  const logoutHandler = () => {
-    dispatch(logoutTC())
   }
 
   return (
@@ -44,11 +39,6 @@ export const Header = ({ theme, themeMode }: HeaderPropsType) => {
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           News
         </Typography>
-        {isLoggedIn && (
-          <MenuButton background={theme.palette.primary.dark} onClick={logoutHandler}>
-            Logout
-          </MenuButton>
-        )}
         <MenuButton background={theme.palette.primary.light}>Faq</MenuButton>
         <Switch color={"default"} onChange={changeHandler} />
       </Toolbar>

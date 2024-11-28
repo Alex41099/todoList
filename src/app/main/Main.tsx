@@ -17,10 +17,6 @@ export const Main = () => {
     dispatch(addTodolistTC(title))
   }
 
-  if (!isLoggedIn) {
-    return <Navigate to={Path.Login} />
-  }
-
   return (
     <Container maxWidth={"xl"}>
       <AddItemForm addItem={addNewTodolist} />
