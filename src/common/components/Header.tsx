@@ -37,7 +37,7 @@ export const Header = ({ theme, themeMode }: HeaderPropsType) => {
           <MenuIcon />
         </IconButton>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          News
+          To-Do List
         </Typography>
         <MenuButton background={theme.palette.primary.light}>Faq</MenuButton>
         <Switch color={"default"} onChange={changeHandler} />

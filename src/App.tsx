@@ -12,6 +12,7 @@ import { Outlet } from "react-router-dom"
 import { initializeAppTC } from "./features/auth/model/auth-reducer"
 import { selectIsInitialized } from "./features/auth/model/authSelectors"
 import s from "./App.module.css"
+import { Main } from "./app/main/Main"
 
 export const App = () => {
   const dispatch = useAppDispatch()
@@ -30,7 +31,7 @@ export const App = () => {
       {isInitialized && (
         <>
           <Header themeMode={themeMode} theme={theme} />
-          <Outlet />
+          <Main />
         </>
       )}
       {!isInitialized && (
