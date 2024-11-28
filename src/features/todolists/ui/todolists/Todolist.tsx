@@ -28,8 +28,8 @@ export const Todolist = ({ id, filter, deleteTodolist, title, entityStatus }: To
 
   return (
     <div>
-      <TodolistInputForm todolistId={id} entityStatus={entityStatus} />
       <TodolistTitle todolistId={id} title={title} entityStatus={entityStatus} />
+      <TodolistInputForm todolistId={id} entityStatus={entityStatus} />
       <Tasks todolistId={id} filter={filter} entityStatus={entityStatus} />
       <FilterTasksButtons filter={filter} todolistId={id} />
     </div>

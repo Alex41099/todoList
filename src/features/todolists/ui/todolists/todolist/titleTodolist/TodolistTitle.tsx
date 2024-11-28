@@ -3,6 +3,7 @@ import { EditableSpan } from "../../../../../../common/components/editableSpan/E
 import { editTodolistAC, updateTodolistTC } from "../../../../model/todolists-reducer"
 import { useAppDispatch } from "../../../../../../common/hooks/useAppDispatch"
 import { RequestStatus } from "../../../../../../app/app-reducer"
+import styled from "styled-components"
 
 type TodolistTitlePropsType = {
   todolistId: string
@@ -19,9 +20,13 @@ export const TodolistTitle = ({ todolistId, title, entityStatus }: TodolistTitle
 
   return (
     <div>
-      <h2>
+      <H2>
         <EditableSpan title={title} getNewTitle={editTitleTodolistHandler} entityStatus={entityStatus} />
-      </h2>
+      </H2>
     </div>
   )
 }
+
+const H2 = styled.h2`
+  margin: 0;
+`
