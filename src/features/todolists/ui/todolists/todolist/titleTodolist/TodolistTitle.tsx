@@ -27,6 +27,6 @@ export const TodolistTitle = ({ todolistId, title, entityStatus }: TodolistTitle
   )
 }
 
-const H2 = styled.h2`
+export const H2 = styled.h2`
   margin: 0;
 `

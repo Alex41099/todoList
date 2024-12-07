@@ -96,7 +96,7 @@ export const clearTasksAC = () => {
 export const fetchTasksTC = (todolistId: string) => {
   return (dispatch: Dispatch, getState: () => RootState) => {
     dispatch(setAppStatusAC("loading"))
-    tasksApi
+    return tasksApi
       .getTasks(todolistId)
       .then((res) => {
         dispatch(setAppStatusAC("succeeded"))
